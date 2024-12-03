@@ -1,2 +1,2 @@
-# hybrid-squad
-A repository for Hybrid-SQuAD: Hybrid Scholarly Question Answering Dataset paper.
+# Hybrid-SQuAD
+A repository for Hybrid-SQuAD: **Hybrid** **S**cholarly **Qu**estion **A**nswering **D**ataset paper.
