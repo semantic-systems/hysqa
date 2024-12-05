@@ -1,5 +1,5 @@
 # Hybrid-SQuAD
-A repository for [Hybrid-SQuAD: **Hybrid** **S**cholarly **Qu**estion **A**nswering **D**ataset](https://arxiv.org/pdf/2412.02788) paper.
+A repository for Hybrid-SQuAD: **Hybrid** **S**cholarly **Qu**estion **A**nswering **D**ataset paper.
 
 
 If you want to test your model please follow the instructions in [Codalab Page](https://codalab.lisn.upsaclay.fr/competitions/19747).
