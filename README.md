@@ -1,5 +1,5 @@
-# Hybrid-SQuAD
-A repository for Hybrid-SQuAD: **Hybrid** **S**cholarly **Qu**estion **A**nswering **D**ataset paper.
+# HySQA
+A repository for HySQA: **Hy**brid **S**cholarly **Q**uestion **A**nswering Dataset paper.
 
 
 If you want to test your model please follow the instructions in [Codalab Page](https://codalab.lisn.upsaclay.fr/competitions/19747).
@@ -8,7 +8,7 @@ If you want to test your model please follow the instructions in [Codalab Page](
 
 The following resources are shared or hosted by us:
 
-[DBLP SPARQL Endpoint](https://dblp-april24.skynet.coypu.org/sparql) (April 2024 snapshot from DBLP)
+[DBLP SPARQL Endpoint](https://dblp-april24.skynet.coypu.org/sparql)
 
 [SemOpenAlex Endpoint](https://semoa.skynet.coypu.org/sparql)
 
