@@ -97,3 +97,19 @@ def identify_sub_question_phrase(question, q_type='bridge'):
     utils.write_to_json(sub_questions, "sub_questions.json")
     formatted_sub_questions = utils.load_json_data("sub_questions.json")
     return formatted_sub_questions
+
+
+def answer_retrieval(question, author_name, context, prompt=''):
+    if prompt == '':
+        prompt = f"""[INST]Task: You are an experienced assistant.
+                   Your task is answering in the question using the given in the CONTEXT.
+                   Do not modify the answer. If you do not find an answer in the CONTEXT say 'answer not found'.
+                   For your information, the author of the publication stated in question is {author_name}.
+                   Please do not add any text, only display the answer!
+                   [/INST]
+                   Question:{question}
+                   CONTEXT: {context}
+                   ANSWER:
+                """
+    model_answer = llms.chatgpt(prompt) # llama(prompt)
+    return model_answer
