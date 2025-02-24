@@ -59,7 +59,7 @@ def entity_resolution(entity='', flag=True):
 
 
 def identify_title(phrase):
-    examples = utils.get_examples(key="identify_title", file_path="./examples.json")
+    examples = utils.get_examples(key="identify_title", file_path="examples.json")
     prompt = f"""Task: Your task is extracting a publication title from the given phrase. 
                 Example
                     {examples}                    
@@ -70,3 +70,30 @@ def identify_title(phrase):
             """
     title = llms.chatgpt(prompt, 6)
     return title
+
+
+def identify_sub_question_phrase(question, q_type='bridge'):
+    if q_type == 'bridge':
+        examples = utils.get_examples(key="identify_sub_question_phrase_bridge",file_path="examples.json")
+    else:
+        examples = utils.get_examples(key="identify_sub_question_phrase_comparison",file_path="examples.json")
+    prompt = f"""[INST]Task: Your task is extracting the sub-question phrases and publication titles in a given QUESTION.
+            Example:
+             {examples}                    
+            Do not add anything else.
+            [/INST]          
+            [{{sub_question_phrase: sub question phrase}},
+            {{title: title}}
+            ]
+            [INST]
+            Please provide your result in JSON format only. Please do not include the Example in your response.
+            [/INST] 
+
+            question: {question}
+
+        """
+    # return test_chatAI.test_chat_ai(prompt)#llms.chatgpt(prompt, 5)  # .llama(decomposition_prompt)
+    sub_questions = llms.chatgpt(prompt, 5)
+    utils.write_to_json(sub_questions, "sub_questions.json")
+    formatted_sub_questions = utils.load_json_data("sub_questions.json")
+    return formatted_sub_questions
