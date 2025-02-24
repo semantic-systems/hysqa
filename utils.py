@@ -2,6 +2,12 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 
 
+def get_examples(key, file_path="./examples.json"):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        examples = json.load(file)
+    return examples.get(key, None)
+
+
 def extruct_values(results):
     return_result = []
     for result in results["results"]["bindings"]:
