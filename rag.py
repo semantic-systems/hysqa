@@ -114,7 +114,6 @@ def rag_answer_generator(docs_embedding_generator, directory_name, question, kg_
     return serialized_response
 
 
-
 def parse_answer(answer):
     answer_json = json.loads(answer)
     answer_string = str(list(answer_json.values())[0])
