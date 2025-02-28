@@ -67,7 +67,6 @@ def construct_prompt(question, kg_context, flag):
         template = """
                     You are an assistant for question-answering tasks.
                     Do not add anything, return only the answer in dictionary format.
-                    The text given the context is the institution Wikipeida text of the author under qeustion.
                     Use the provided context only to answer the following question:
 
                     <context>
