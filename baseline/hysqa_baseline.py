@@ -80,9 +80,9 @@ def identify_title(phrase):
 
 def identify_sub_question_phrase(question, q_type='bridge'):
     if q_type == 'bridge':
-        examples = utils.get_examples(key="identify_sub_question_phrase_bridge",file_path="examples.json")
+        examples = utils.get_examples(key="identify_sub_question_phrase_bridge", file_path="examples.json")
     else:
-        examples = utils.get_examples(key="identify_sub_question_phrase_comparison",file_path="examples.json")
+        examples = utils.get_examples(key="identify_sub_question_phrase_comparison", file_path="examples.json")
     prompt = f"""[INST]Task: Your task is extracting the sub-question phrases and publication titles in a given QUESTION.
             Example:
              {examples}                    
