@@ -374,7 +374,7 @@ def process_rag_result(q_id, rag_result, q_type, source_type, reasoning_path):
 
 def run_answer_extraction(file_name):
     test_data = utils.load_json_data(file_name)
-    answer_predictions = utils.load_json_data("hero_sch_quad/experiment/answer_predictions.json")
+    answer_predictions = utils.load_json_data("data/experiment/answer_predictions.json")
     utils.write_to_json(answer_predictions, "answer_predictions_backup.json")
     docs_embedding_generator = rag.DocsEmbeddingsGenerator()
     for item in test_data:  # [3000:3003]:
@@ -406,7 +406,7 @@ def run_answer_extraction(file_name):
                 answer_predictions.append(
                     process_rag_result(item["id"], rag_result, q_type, source_type, reasoning_path))
 
-        utils.write_to_json(answer_predictions, "hero_sch_quad/experiment/answer_predictions.json")
+        utils.write_to_json(answer_predictions, "data/experiment/answer_predictions.json")
 
 
 def parse_nested_json(json_obj):
@@ -469,4 +469,4 @@ def parse_answer_predictions():
 
 
 if __name__ == "__main__":
-    run_answer_extraction("testdata.json")
+    run_answer_extraction("data/hysqa_test_set.json")
