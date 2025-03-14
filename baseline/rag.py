@@ -123,7 +123,8 @@ def parse_answer(answer):
 
 if __name__ == "__main__":
     sample_questions = utils.load_json_data('sample_test.json')
+    docs_embedding_generator = DocsEmbeddingsGenerator()
     for ques in sample_questions:
-        model_response = rag_answer_generator('/experiment/sample', ques['question'])
+        model_response = rag_answer_generator(docs_embedding_generator, '/experiment/sample', ques['question'])
         # print(answer)
         print(model_response)
