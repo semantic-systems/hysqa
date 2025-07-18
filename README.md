@@ -1,9 +1,6 @@
 # HySQA
 A repository for HySQA: **Hy**brid **S**cholarly **Q**uestion **A**nswering Dataset paper.
 
-
-If you want to test your model please follow the instructions in [Codalab Page](https://codalab.lisn.upsaclay.fr/competitions/19747).
-
 ## Resources
 
 The following resources are shared or hosted by us:
@@ -25,3 +22,7 @@ Codalab computes two metrics when you upload your answers to the test set questi
 2. F-score
 
 The evaluation script can be found [here](https://raw.githubusercontent.com/debayan/scholarly-QALD-challenge/main/2024/dataset/qa_eval_em_f1.py).
+
+## Scholarly Hybrid QA challenge test split
+The Scholarly Hybrid QA challenge at ISWC 2024 test set split is found [https://github.com/semantic-systems/hysqa/blob/main/data/hysqa_test_set.json].
+If you want to test your model please follow the instructions in [Codalab Page](https://codalab.lisn.upsaclay.fr/competitions/19747).
