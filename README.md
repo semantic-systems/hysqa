@@ -24,5 +24,6 @@ Codalab computes two metrics when you upload your answers to the test set questi
 The evaluation script can be found [here](https://raw.githubusercontent.com/debayan/scholarly-QALD-challenge/main/2024/dataset/qa_eval_em_f1.py).
 
 ## Scholarly Hybrid QA challenge test split
-The Scholarly Hybrid QA challenge at ISWC 2024 test set split is found [https://github.com/semantic-systems/hysqa/blob/main/data/hysqa_test_set.json].
+The Scholarly Hybrid QA challenge at ISWC 2024 test set split (which contains 702 questions) is found [https://github.com/semantic-systems/hysqa/blob/main/data/hysqa_test_set.json].
+
 If you want to test your model please follow the instructions in [Codalab Page](https://codalab.lisn.upsaclay.fr/competitions/19747).
