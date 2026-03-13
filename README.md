@@ -1,5 +1,5 @@
 # HySQA
-A repository for HySQA: **Hy**brid **S**cholarly **Q**uestion **A**nswering Dataset paper.
+A repository for [HySQA: **Hy**brid **S**cholarly **Q**uestion **A**nswering](https://ebooks.iospress.nl/volumearticle/74639) Dataset paper.
 
 ## Resources
 
